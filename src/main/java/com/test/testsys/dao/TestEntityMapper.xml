@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="com.test.testsys.dao.TestEntityDao">
+	<insert id="save" parameterType="com.test.testsys.entity.TestEntity" >
+		insert into t_testentity(id,description,te_iden) values(#{id},#{description},#{teIden})
+	</insert>
+	<update id="update" parameterType="com.test.testsys.entity.TestEntity" >
+		update t_testentity set description=#{description},te_iden=#{teIden} where id=#{id}
+	</update>
+	<delete id="deleteByIds" >
+		delete from t_testentity where id in 
+		<foreach collection="list" item="ids" open="(" separator="," close=")">
+			#{ids}
+		</foreach>
+	</delete>
+	
+	
+</mapper>
