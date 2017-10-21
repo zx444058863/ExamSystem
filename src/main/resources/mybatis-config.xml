@@ -3,7 +3,8 @@
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
-<configuration>
+<configuration> 
+	
     <settings>
         <setting name="cacheEnabled" value="true" />
         <setting name="lazyLoadingEnabled" value="true" />
@@ -19,7 +20,10 @@
         <setting name="defaultExecutorType" value="SIMPLE" />
         <setting name="defaultStatementTimeout" value="25000" />        
     </settings>
-    <mappers>
-        <mapper resource="com/test/testsys/dao/TestEntityMapper.xml"/>
-    </mappers>
+    
+    <!-- 实体类,简称 -设置别名 -->  
+    <typeAliases>  
+        <typeAlias alias="TestEntity" type="com.test.testsys.entity.TestEntity" />  
+    </typeAliases> 
+    
 </configuration>

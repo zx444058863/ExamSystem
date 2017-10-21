@@ -8,8 +8,18 @@ public class ResultData {
     private String code;
     private Object data;
     private String msg;
+   
+    public ResultData() {
+		super();
+		this.code = "0";
+	}
 
-    public String getCode() {
+	public ResultData(String code) {
+		super();
+		this.code = code;
+	}
+
+	public String getCode() {
         return code;
     }
 
@@ -31,5 +41,9 @@ public class ResultData {
 
     public void setMsg(String msg) {
         this.msg = msg;
+    }
+    
+    public boolean success() {
+    	return "0".equals(this.code) ? true : false; 
     }
 }

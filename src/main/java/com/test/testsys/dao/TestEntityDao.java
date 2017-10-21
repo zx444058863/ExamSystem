@@ -5,6 +5,8 @@ package com.test.testsys.dao;
 
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.test.testsys.entity.TestEntity;
 
 /**
@@ -12,6 +14,7 @@ import com.test.testsys.entity.TestEntity;
  * @author Julia
  *
  */
+@Repository("testEntityDao")
 public interface TestEntityDao {
 
 	/**
@@ -37,6 +40,6 @@ public interface TestEntityDao {
 	/**
 	 * 全查询操作
 	 * */
-	public List<TestEntity> queryByAll();
+	public List<TestEntity> queryAll();
 	
 }
