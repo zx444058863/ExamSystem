@@ -5,7 +5,6 @@ package com.test.testsys.entity;
 
 /**
  * @author Julia
- * @
  */
 public class TestEntity {
 	
@@ -15,6 +14,10 @@ public class TestEntity {
 	
 	private Integer teIden;
 	
+	public TestEntity() {
+		super();
+	}
+
 	public TestEntity(Integer id, String description) {
 		super();
 		this.id = id;

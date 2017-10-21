@@ -1,7 +1,6 @@
 -- 数据库建表语句
 CREATE TABLE t_testentity(
-    id int NOT NULL,
+    id INTEGER PRIMARY KEY autoincrement,
     description varchar(200),
-    te_iden int,
-    PRIMARY KEY (id)
+    te_iden int
 );
