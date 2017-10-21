@@ -19,4 +19,7 @@
         <setting name="defaultExecutorType" value="SIMPLE" />
         <setting name="defaultStatementTimeout" value="25000" />        
     </settings>
+    <mappers>
+        <mapper resource="com/test/testsys/dao/TestEntityMapper.xml"/>
+    </mappers>
 </configuration>
